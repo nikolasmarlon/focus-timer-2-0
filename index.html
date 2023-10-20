@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FocusTimer - 2.0</title>
 
     <link rel="stylesheet" href="./styles/estilos.css">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" src="./src/main.js"></script>
 </head>
 <body>
     <div id="app">
-        
+        <main>
+            <section id="timer" >
+                <span>25</span>
+                <span>:</span>
+                <span>00</span>
+            </section>
+    
+            <section id="controles">
+                <button class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button class="ph ph-stop-circle">
+                    <span  class="sr-only">Iniciar contador</span>
+                </button>
+                <button class="ph ph-plus-circle">
+                    <span  class="sr-only">Iniciar contador</span>
+                </button>
+                <button class="ph ph-minus-circle">
+                    <span  class="sr-only">Iniciar contador</span>
+                </button>
+            </section>
+        </main>
+        <aside>
+            <div class="music-container">
+                <span class="ph ph-tree"></span>
+            </div>
+            <div class="music-container music-active">
+                <span class="ph ph-cloud-snow "></span>
+            </div>
+            <div class="music-container">
+                <span class="ph ph-coffee"></span>
+            </div>
+            <div class="music-container">
+                <span class="ph ph-campfire"></span>
+            </div>
+        </aside>
     </div>
 </body>
 </html>
