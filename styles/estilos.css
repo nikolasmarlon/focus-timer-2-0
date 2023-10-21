@@ -57,9 +57,12 @@ body, button, a, textarea{
     font-size: 48px;
     line-height: normal;
     background: none;
-    border: none;
-    
+    border: none;   
+    cursor: pointer;
+    color: #323238;
 }
+
+
 
 aside{
     width: 310px;
@@ -76,7 +79,7 @@ aside{
     width: 138px;
     height: 152px;
     border-radius: 24px;
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,4 +92,20 @@ aside{
 .music-container span{
     font-size: 44px;
     color: #323238;    
+}
+
+.music-active span{
+    background-color: #02799D;
+    color: #E1E1E6;
+}
+
+
+/* controls
+classe .rodando e music-on é adicionado na tag <html> 
+via javascript
+*/
+
+.rodando .ph-play-circle,
+html:not( .rodando ) .ph-pause-circle {
+    display: none;
 }
