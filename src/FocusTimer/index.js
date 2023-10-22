@@ -14,6 +14,7 @@ export function start(minutos, segundos){
     timer.updateDisplay()
 
     // registro de eventos 
+    eventos.trocarMinutos()
     eventos.registroDeEventosControles()
     eventos.registroControleMusica()
 

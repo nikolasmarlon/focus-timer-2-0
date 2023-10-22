@@ -1,5 +1,9 @@
-import { controles, musicaControles } from "./elementos.js"
+import { controles, musicaControles, timer } from "./elementos.js"
 import * as acoes from "./acoes.js"
+
+import * as elementos from './elementos.js'
+import estado from "./estado.js"
+import { updateDisplay } from "./timer.js"
 
 export function registroDeEventosControles(){
 
@@ -16,6 +20,37 @@ export function registroDeEventosControles(){
     })
 }
 
+export function trocarMinutos(){
+    timer.addEventListener('click', (evento) => {
+        const timer = evento.target.dataset.timer
+
+        if(typeof acoes[timer] != "function"){
+            return
+        }
+
+        acoes[timer]()
+
+        elementos.minutos.textContent = ""
+        
+        
+    })
+
+    elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
+
+    elementos.minutos.addEventListener('blur', (evento) => {
+        let time = evento.currentTarget.textContent
+
+        time = time > 60 || time <= 0 ? 60 : time // ternário 
+
+        estado.minutos = time
+
+        estado.segundos = 0
+        updateDisplay()
+
+        elementos.minutos.removeAttribute('contenteditable')
+    })
+}
+
 
 export function registroControleMusica(){
     musicaControles.addEventListener('click', (evento) => {
@@ -29,3 +64,4 @@ export function registroControleMusica(){
 
     })
 }
+
