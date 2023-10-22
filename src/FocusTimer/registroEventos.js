@@ -1,4 +1,5 @@
 import { controles, musicaControles } from "./elementos.js"
+import * as acoes from "./acoes.js"
 
 export function registroDeEventosControles(){
 
@@ -6,11 +7,11 @@ export function registroDeEventosControles(){
     controles.addEventListener('click', (evento) => {
         const botao = evento.target.dataset.botao
         
-        if(botao === undefined){
+        if(typeof acoes[botao] != "function"){
             return
         }
 
-        console.log(botao)
+        acoes[botao]()
         
     })
 }
@@ -20,11 +21,11 @@ export function registroControleMusica(){
     musicaControles.addEventListener('click', (evento) => {
         const musica = evento.target.dataset.musica
 
-        if(musica === undefined){
+        if(typeof acoes[musica] != "function"){
             return
         }
 
-        console.log(musica)
+        acoes[musica]()
 
     })
 }

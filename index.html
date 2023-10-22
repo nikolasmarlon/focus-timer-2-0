@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="rodando">
+<html lang="pt-br" >
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,16 +27,16 @@
 
         <main>
             <section id="timer" >
-                <span>25</span>
+                <span id="minutos">25</span>
                 <span>:</span>
-                <span>00</span>
+                <span id="segundos">00</span>
             </section>
     
             <section id="controles">
-                <button data-botao="play" class="ph ph-play-circle">
+                <button data-botao="playPause" class="ph ph-play-circle">
                     <i class="sr-only">Iniciar contador</i>
                 </button>
-                <button data-botao="pause" class="ph ph-pause-circle">
+                <button data-botao="playPause" class="ph ph-pause-circle">
                     <i class="sr-only">Pausar contador</i>
                 </button>
                 <button data-botao="stop" class="ph ph-stop-circle">
@@ -51,17 +51,17 @@
             </section>
         </main>
         <aside id="musica-controles">
-            <div data-musica="tree" class="music-container">
-                <span data-musica="tree" class="ph ph-tree"></span>
+            <div data-musica="tocarMusica" class="music-container">
+                <span data-musica="tocarMusica" class="ph ph-tree"></span>
             </div>
-            <div data-musica="cloud" class="music-container music-active">
-                <span data-musica="cloud" class="ph ph-cloud-snow "></span>
+            <div data-musica="tocarMusica" class="music-container music-active">
+                <span data-musica="tocarMusica" class="ph ph-cloud-snow "></span>
             </div>
-            <div data-musica="coffee" class="music-container">
-                <span data-musica="coffee" class="ph ph-coffee"></span>
+            <div data-musica="tocarMusica" class="music-container">
+                <span data-musica="tocarMusica" class="ph ph-coffee"></span>
             </div>
-            <div data-musica="campfire"  class="music-container">
-                <span data-musica="campfire" class="ph ph-campfire"></span>
+            <div data-musica="tocarMusica"  class="music-container">
+                <span data-musica="tocarMusica" class="ph ph-campfire"></span>
             </div>
         </aside>
     </div>
