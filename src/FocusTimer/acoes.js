@@ -57,46 +57,18 @@ export function trocarTempo(){
 }
 
 
-export function cafeteriaAudio(){
-    let qualMusica = document.getElementById('cafeteriaAudio')
-    estado.estaMudo =  qualMusica.classList.toggle('music-active')    
-
-    if(estado.estaMudo){
-        sons.cafeteriaAudio.play()
+export function tocarMusica(musica){
+    
+    let qualMusica = document.getElementById(musica)    
+    console.log('primeiro console ' + estado.estaMudo)
+    estado.estaMudo =  qualMusica.classList.toggle('music-active')  
+    
+    if(estado.estaMudo){   
+        console.log('segundo console ' + estado.estaMudo)
+        sons[musica].pause()     
+        sons[musica].play()
         return
     }
-    sons.cafeteriaAudio.pause()
-}
-
-export function chuvaAudio(){
-    let qualMusica = document.getElementById('chuvaAudio')
-    estado.estaMudo =  qualMusica.classList.toggle('music-active')    
-
-    if(estado.estaMudo){
-        sons.chuvaAudio.play()
-        return
-    }
-    sons.chuvaAudio.pause()
-}
-
-export function florestaAudio(){
-    let qualMusica = document.getElementById('florestaAudio')
-    estado.estaMudo =  qualMusica.classList.toggle('music-active')    
-
-    if(estado.estaMudo){
-        sons.florestaAudio.play()
-        return
-    }
-    sons.florestaAudio.pause()
-}
-
-export function lareiraAudio(){
-    let qualMusica = document.getElementById('lareiraAudio')
-    estado.estaMudo =  qualMusica.classList.toggle('music-active')    
-
-    if(estado.estaMudo){
-        sons.lareiraAudio.play()
-        return
-    }
-    sons.lareiraAudio.pause()
+    sons[musica].pause()
+    console.log('terceiro console ' + estado.estaMudo)
 }
