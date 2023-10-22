@@ -2,6 +2,9 @@ import estado from "./estado.js";
 import * as elementos  from './elementos.js'
 import { stop } from "./acoes.js";
 
+// import som final tempo
+import { somTempoEsgotado } from "./sons.js";
+
 export function contador(){
     
     // se o estado rodando é falso eu vou retornar
@@ -21,6 +24,7 @@ export function contador(){
 
     if(minutos < 0 ){
         stop()
+        somTempoEsgotado.play()
         return
     }
 
