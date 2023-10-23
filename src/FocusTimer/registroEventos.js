@@ -41,7 +41,7 @@ export function trocarMinutos(){
 
    elementos.minutos.onkeypress = ( (evento) => {
     if(isNaN(String.fromCharCode(evento.which))){
-        console.log('apenas números')
+        alert('apenas números')
         evento.preventDefault()
     }
 })
