@@ -24,6 +24,8 @@ export function trocarMinutos(){
     timer.addEventListener('click', (evento) => {
         const timer = evento.target.dataset.timer
 
+        
+
         if(typeof acoes[timer] != "function"){
             return
         }
@@ -35,15 +37,15 @@ export function trocarMinutos(){
         
     })
 
-   elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
+   // elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
 
-    elementos.minutos.addEventListener('input', (evento) => {
-        const valor = minutos.value;
-        if (!/^\d*$/.test(valor)) {
-          minutos.value = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
-        }
-    })
-
+   elementos.minutos.onkeypress = ( (evento) => {
+    if(isNaN(String.fromCharCode(evento.which))){
+        console.log('apenas números')
+        evento.preventDefault()
+    }
+})
+   
     elementos.minutos.addEventListener('blur', (evento) => {
         let time = evento.currentTarget.textContent
 
