@@ -38,9 +38,9 @@ export function trocarMinutos(){
     })
 
     elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)  
-    elementos.minutos.ontouchstart = (evento) =>  /\d/.test(evento.key)  
+    elementos.minutos.ontouchend = (evento) =>  /\d/.test(evento.key)  
    
-   
+    
      
    
     elementos.minutos.addEventListener('blur', (evento) => {
