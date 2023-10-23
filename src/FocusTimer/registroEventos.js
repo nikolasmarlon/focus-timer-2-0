@@ -38,13 +38,9 @@ export function trocarMinutos(){
     })
 
     elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)  
+    elementos.minutos.ontouchstart = (evento) =>  /\d/.test(evento.key)  
    
-    elementos.minutos.ontouchstart = ( (evento) => {
-        if(isNaN(String.fromCharCode(evento.which))){
-            alert('apenas números')
-            evento.preventDefault()
-        }
-    })
+   
      
    
     elementos.minutos.addEventListener('blur', (evento) => {
