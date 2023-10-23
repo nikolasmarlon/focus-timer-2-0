@@ -59,9 +59,17 @@ export function registroControleMusica(){
         if(typeof acoes.tocarMusica != "function"){
             return
         }
+
+        estado.musicaEmExecucao.push(musica)        
         
-        
-        acoes.tocarMusica(musica)
+        if(estado.musicaEmExecucao[0] === musica){            
+            if(estado.musicaEmExecucao.length >= 2){
+                estado.musicaEmExecucao = []
+            }
+            
+            acoes.tocarMusica(musica)
+            
+        }
         
 
     })
