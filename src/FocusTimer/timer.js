@@ -22,6 +22,7 @@ export function contador(){
     if(segundos < 0){
         segundos = 59
         minutos --
+        estado.minutos --        
     }
 
     if(minutos < 0 ){
@@ -31,6 +32,10 @@ export function contador(){
     }
 
     updateDisplay(minutos, segundos)
+    
+   
+
+    
 
     // settimeout returna um id toda vez que é criado
     estado.contadorId = setTimeout(() => {
@@ -41,6 +46,8 @@ export function contador(){
 export function updateDisplay(minutos, segundos){
     minutos = minutos ?? estado.minutos  // nullish coalesing operator
     segundos = segundos ?? estado.segundos  // nullish coalesing operator
+
+    
 
     //atualizar o elemento html
     elementos.minutos.textContent =  String(minutos).padStart(2, "0")

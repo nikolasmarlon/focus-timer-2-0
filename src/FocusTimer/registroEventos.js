@@ -40,7 +40,7 @@ export function trocarMinutos(){
     elementos.minutos.addEventListener('blur', (evento) => {
         let time = evento.currentTarget.textContent
 
-        time = time > 60 || time <= 0 ? 60 : time // ternário 
+        time = time > 60 || time <= 0 ? 25 : time // ternário 
 
         estado.minutos = time
 

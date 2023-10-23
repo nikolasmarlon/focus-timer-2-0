@@ -9,7 +9,7 @@ import * as timer from './timer.js'
 import * as sons from './sons.js'
 
 export function playPause(){
-    console.log('função de play e pause')
+    
 
     estado.estaRodando =  document.documentElement.classList.toggle('rodando')
 
@@ -24,14 +24,11 @@ export function stop(){
     estado.estaRodando = false
     document.documentElement.classList.remove('rodando')
     
-    timer.updateDisplay()
+    timer.updateDisplay(25)
     sons.botaoAudio.play()
 }
 
-export function mais () {
-    console.log('mais')
-
-    console.log(estado.minutos)
+export function mais () {      
 
     estado.minutos = estado.minutos + 5
     sons.botaoAudio.play()
@@ -39,11 +36,10 @@ export function mais () {
     
 }
 export function menos () {
-    console.log('menos')
-
-    console.log(estado.minutos)
-
+      
+    
     estado.minutos = estado.minutos - 5
+    
     sons.botaoAudio.play()
     timer.updateDisplay(estado.minutos, estado.segundos)
     
@@ -51,9 +47,7 @@ export function menos () {
 
 export function trocarTempo(){
     elementos.minutos.setAttribute('contenteditable', true)
-    elementos.minutos.focus()
-
-    console.log('trocar tempo')
+    elementos.minutos.focus()   
 }
 
 

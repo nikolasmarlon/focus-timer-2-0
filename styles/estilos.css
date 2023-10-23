@@ -14,6 +14,8 @@
     --cor-icone-ativo: hsl(0, 0%, 100%);
     --cor-primaria: hsl(240, 9%, 89%);
     --cor-secundaria: hsl(194, 97%, 31%);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
 html.dark{
@@ -48,8 +50,7 @@ body, button, a, textarea{
 }
 
 
-#app{
-    
+#app{    
     display: flex;
     gap: 192px;
     justify-content: center;
@@ -58,12 +59,14 @@ body, button, a, textarea{
 }
 
 #timer{      
-    font-size: 138px;
+    font-size: 13.8rem;
     font-weight: 500;
     line-height: normal;  
-    
+    text-align: center;
     color:var(--cor-texto);
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1px;
     
 }
@@ -72,11 +75,11 @@ body, button, a, textarea{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;    
+    gap: 4rem;    
 }
 
 #controles button{
-    font-size: 48px;
+    font-size: 4.8rem;
     line-height: normal;
     background: none;
     border: none;   
@@ -87,19 +90,19 @@ body, button, a, textarea{
 
 
 aside{
-    width: 310px;
-    height: 340px;
+    width: 31rem;
+    height: 34rem;
     
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 3.2rem;
 }
 
 .music-container{
     background-color:var(--cor-primaria);
-    width: 138px;
-    height: 152px;
+    width: 13.8rem;
+    height: 15.2rem;
     border-radius: 24px;
     cursor: pointer;
     display: flex;
@@ -148,4 +151,19 @@ via javascript
 .rodando .ph-play-circle,
 html:not( .rodando ) .ph-pause-circle {
     display: none;
+    
+}
+
+
+@media (max-width: 900px) {
+
+    #app{
+        flex-direction: column;
+        width: 100%;
+        gap: 10rem;
+    }
+    body{
+        width: 100%;
+
+    }
 }
