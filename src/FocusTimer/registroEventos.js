@@ -37,19 +37,15 @@ export function trocarMinutos(){
         
     })
 
-    elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)
-    elementos.minutos.touchstart = (evento) =>  /\d/.test(evento.target)
-
+    elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)  
    
-    /**
-     * 
-     * elementos.minutos.onkeypress = ( (evento) => {
+    elementos.minutos.ontouchstart = ( (evento) => {
         if(isNaN(String.fromCharCode(evento.which))){
             alert('apenas números')
             evento.preventDefault()
         }
     })
-     */
+     
    
     elementos.minutos.addEventListener('blur', (evento) => {
         let time = evento.currentTarget.textContent
