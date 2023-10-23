@@ -29,6 +29,8 @@ export function trocarMinutos(){
         }
 
         acoes[timer]()
+        
+        
 
         elementos.minutos.textContent = ""
         
@@ -37,14 +39,7 @@ export function trocarMinutos(){
 
     elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
 
-    elementos.minutos.addEventListener('change', (evento) => {
-        let tempo = evento.currentTarget.textContent
-
-        if(tempo.length > 2){
-            alert("Digite dois caracteres")
-           
-        }
-    })
+   
    
 
     elementos.minutos.addEventListener('blur', (evento) => {
