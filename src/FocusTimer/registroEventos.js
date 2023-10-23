@@ -38,7 +38,7 @@ export function trocarMinutos(){
     })
 
     elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)
-    elementos.minutos.touchstart = (evento) =>  /\d/.test(evento.key)
+    elementos.minutos.touchstart = (evento) =>  /\d/.test(evento.target)
 
    
     /**
