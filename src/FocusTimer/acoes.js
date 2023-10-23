@@ -46,11 +46,10 @@ export function menos () {
 }
 
 export function trocarTempo(){
-    elementos.minutos.setAttribute('contenteditable', true)  
-    elementos.minutos.setAttribute('type', 'number')  
-   
-    elementos.minutos.focus()   
-
+    elementos.minutos.setAttribute('contenteditable', true)    
+    elementos.minutos.focus() 
+    
+    
 }
 
 

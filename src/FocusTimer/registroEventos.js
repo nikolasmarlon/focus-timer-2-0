@@ -29,8 +29,6 @@ export function trocarMinutos(){
         }
 
         acoes[timer]()
-        
-        
 
         elementos.minutos.textContent = ""
         
@@ -39,7 +37,14 @@ export function trocarMinutos(){
 
     elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
 
-   
+    elementos.minutos.addEventListener('blur', (evento) => {
+        let tempo = evento.currentTarget.textContent
+
+        if(tempo.length > 2){
+            alert("Digite apenas dois números")
+           
+        }
+    })
    
 
     elementos.minutos.addEventListener('blur', (evento) => {
