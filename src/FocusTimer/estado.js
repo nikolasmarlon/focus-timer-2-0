@@ -5,5 +5,6 @@ export default {
     segundos: 0,
     estaRodando: false,
     estaMudo: true,
+    musicaEmExecucao: "",
     contador: null,
 }

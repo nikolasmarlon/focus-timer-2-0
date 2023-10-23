@@ -56,6 +56,11 @@ export function registroControleMusica(){
     musicaControles.addEventListener('click', (evento) => {
         const musica = evento.target.dataset.musica
 
+        if(typeof acoes.tocarMusica != "function"){
+            return
+        }
+        
+        
         acoes.tocarMusica(musica)
         
 

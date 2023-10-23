@@ -60,15 +60,23 @@ export function trocarTempo(){
 export function tocarMusica(musica){
     
     let qualMusica = document.getElementById(musica)    
-    console.log('primeiro console ' + estado.estaMudo)
+     
+    console.log(" primeiro " + estado.estaMudo)
+
     estado.estaMudo =  qualMusica.classList.toggle('music-active')  
+
+    console.log(" segundo  " + estado.estaMudo)
     
-    if(estado.estaMudo){   
-        console.log('segundo console ' + estado.estaMudo)
-        sons[musica].pause()     
+    if(estado.estaMudo){
+        estado.estaMudo  = false       
+        console.log(estado.estaMudo)   
         sons[musica].play()
+        !estado.estaMudo
         return
+    } else {
+        sons[musica].pause()
     }
-    sons[musica].pause()
-    console.log('terceiro console ' + estado.estaMudo)
+
+   
+    
 }
