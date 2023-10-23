@@ -6,6 +6,8 @@ import { stop } from "./acoes.js";
 import { somTempoEsgotado } from "./sons.js";
 
 export function contador(){
+
+    clearTimeout(estado.contadorId)
     
     // se o estado rodando é falso eu vou retornar
     if(!estado.estaRodando){
@@ -30,7 +32,8 @@ export function contador(){
 
     updateDisplay(minutos, segundos)
 
-    setTimeout(() => {
+    // settimeout returna um id toda vez que é criado
+    estado.contadorId = setTimeout(() => {
         contador()
     }, 1000);
 }

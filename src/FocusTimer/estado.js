@@ -6,5 +6,5 @@ export default {
     estaRodando: false,
     estaMudo: true,
     musicaEmExecucao: [],
-    contador: null,
+    contadorId: null,
 }
