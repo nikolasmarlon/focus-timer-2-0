@@ -35,7 +35,14 @@ export function trocarMinutos(){
         
     })
 
-    elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
+   elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
+
+    elementos.minutos.addEventListener('input', (evento) => {
+        const valor = minutos.value;
+        if (!/^\d*$/.test(valor)) {
+          minutos.value = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
+        }
+    })
 
     elementos.minutos.addEventListener('blur', (evento) => {
         let time = evento.currentTarget.textContent
