@@ -24,8 +24,6 @@ export function trocarMinutos(){
     timer.addEventListener('click', (evento) => {
         const timer = evento.target.dataset.timer
 
-        
-
         if(typeof acoes[timer] != "function"){
             return
         }
@@ -37,12 +35,9 @@ export function trocarMinutos(){
         
     })
 
-    elementos.minutos.onkeydown = (evento) =>  /\d/.test(evento.key)  
-    elementos.minutos.ontouchend = (evento) =>  /\d/.test(evento.key)  
+    elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
    
-    
-     
-   
+
     elementos.minutos.addEventListener('blur', (evento) => {
         let time = evento.currentTarget.textContent
 
