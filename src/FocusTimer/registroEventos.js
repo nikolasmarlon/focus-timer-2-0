@@ -37,7 +37,7 @@ export function trocarMinutos(){
 
     elementos.minutos.onkeypress = (evento) =>  /\d/.test(evento.key)
 
-    elementos.minutos.addEventListener('onchange', (evento) => {
+    elementos.minutos.addEventListener('change', (evento) => {
         let tempo = evento.currentTarget.textContent
 
         if(tempo.length > 2){
